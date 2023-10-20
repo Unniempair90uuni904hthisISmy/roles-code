@@ -1,0 +1,12 @@
+---
+- hosts: 
+    - localhost
+    - all
+  become: true
+  vars:
+    ansible_become_pass: "{{ var_node }}"
+  roles:
+    - prerequisites
+    - mongodb
+    - nodejs
+
